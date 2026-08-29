@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Neurounity Initiative | Student neuroscience project</title>
+  <meta name="description" content="Neurounity is a student-run project in Syosset, New York. We are developing a school workshop about stress, attention, and reaction time.">
+  <meta name="theme-color" content="#0b1328">
+
+  <link rel="icon" href="/assets/favicon.png" type="image/png">
+  <link rel="apple-touch-icon" href="/assets/favicon.png">
+  <link rel="canonical" href="https://neurounityorg.github.io/">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Neurounity Initiative">
+  <meta property="og:title" content="Neurounity Initiative | Student neuroscience project">
+  <meta property="og:description" content="A student-run project about stress, attention, and reaction time through physics, math, coding, and medicine.">
+  <meta property="og:url" content="https://neurounityorg.github.io/">
+  <meta property="og:image" content="https://neurounityorg.github.io/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Neurounity Initiative">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Neurounity Initiative">
+  <meta name="twitter:description" content="A student-run project about stress, attention, and reaction time.">
+  <meta name="twitter:image" content="https://neurounityorg.github.io/assets/og.jpg">
+
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <header class="site-header" data-header>
+    <div class="nav-shell">
+      <a class="brand" href="#top" aria-label="Neurounity home">
+        <img src="/assets/logo.png" alt="" width="42" height="42">
+        <span><strong>Neurounity</strong><small>Initiative</small></span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+        <span>Menu</span>
+        <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
+          <path d="M4 7h16M4 12h16M4 17h16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#lab">Try the lab</a>
+        <a href="#approach">How it works</a>
+        <a href="#pilot">The pilot</a>
+        <a class="nav-cta" href="#schools">Host a pilot</a>
+      </nav>
+    </div>
+    <div class="scroll-track" aria-hidden="true"><span id="scroll-progress"></span></div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero" id="top">
+      <canvas id="signal-field" aria-hidden="true"></canvas>
+      <div class="hero-glow" aria-hidden="true"></div>
+
+      <div class="hero-shell">
+        <div class="hero-copy reveal is-visible">
+          <p class="eyebrow"><span>Project 01</span> Student-run in Syosset, New York</p>
+          <h1>A classroom workshop about <em>stress and attention.</em></h1>
+          <p class="hero-intro">The first activity is a visual reaction-time task for high school students. It does not measure stress or diagnose attention. We use it to connect physics, math, coding, and medicine.</p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#lab">Try the reaction-time lab</a>
+            <a class="text-link" href="#pilot">See the pilot plan <span aria-hidden="true">↘</span></a>
+          </div>
+
+          <dl class="hero-facts">
+            <div><dt>Status</dt><dd>Pilot in development</dd></div>
+            <div><dt>Audience</dt><dd>High school students</dd></div>
+            <div><dt>Experiment results</dt><dd>Not uploaded</dd></div>
+          </dl>
+        </div>
+
+        <div class="hero-visual reveal is-visible" aria-hidden="true">
+          <div class="signal-card">
+            <div class="signal-card-top">
+              <span>Signal path illustration</span>
+              <span>not live data</span>
+            </div>
+            <svg class="signal-map" viewBox="0 0 520 560" role="presentation">
+              <defs>
+                <linearGradient id="brand-gradient" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#f31658"/>
+                  <stop offset="1" stop-color="#ff7300"/>
+                </linearGradient>
+                <filter id="signal-glow" x="-80%" y="-80%" width="260%" height="260%">
+                  <feGaussianBlur stdDeviation="5" result="blur"/>
+                  <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+                </filter>
+              </defs>
+              <g class="map-lines" fill="none" stroke="#657394" stroke-width="1.5">
+                <path d="M80 90 184 142 270 72 374 132 446 62"/>
+                <path d="M54 238 150 198 238 260 332 204 454 260"/>
+                <path d="M92 400 194 326 284 390 386 336 462 430"/>
+                <path d="M184 142 150 198 194 326 92 400"/>
+                <path d="M270 72 238 260 284 390 240 494"/>
+                <path d="M374 132 332 204 386 336 360 492"/>
+                <path d="M446 62 454 260 462 430"/>
+              </g>
+              <path class="signal-path" d="M54 238 150 198 238 260 332 204 386 336 284 390 240 494" fill="none" stroke="url(#brand-gradient)" stroke-width="4" stroke-linecap="round"/>
+              <g class="map-nodes" fill="#111c36" stroke="#9aa6bd" stroke-width="2">
+                <circle cx="80" cy="90" r="8"/><circle cx="184" cy="142" r="9"/>
+                <circle cx="270" cy="72" r="8"/><circle cx="374" cy="132" r="10"/>
+                <circle cx="446" cy="62" r="7"/><circle cx="54" cy="238" r="9"/>
+                <circle cx="150" cy="198" r="11"/><circle cx="238" cy="260" r="12"/>
+                <circle cx="332" cy="204" r="9"/><circle cx="454" cy="260" r="10"/>
+                <circle cx="92" cy="400" r="8"/><circle cx="194" cy="326" r="11"/>
+                <circle cx="284" cy="390" r="10"/><circle cx="386" cy="336" r="9"/>
+                <circle cx="462" cy="430" r="8"/><circle cx="240" cy="494" r="9"/>
+                <circle cx="360" cy="492" r="8"/>
+              </g>
+              <circle class="signal-pulse" cx="54" cy="238" r="7" fill="#ff7845" filter="url(#signal-glow)"/>
+            </svg>
+            <div class="signal-card-bottom">
+              <span><i class="legend-line"></i> Connection</span>
+              <span><i class="legend-pulse"></i> Signal</span>
+            <b>Simplified classroom diagram</b>
+            </div>
+          </div>
+          <span class="orbit-label orbit-one">physics</span>
+          <span class="orbit-label orbit-two">mathematics</span>
+          <span class="orbit-label orbit-three">code</span>
+          <span class="orbit-label orbit-four">medicine</span>
+        </div>
+      </div>
+
+      <a class="scroll-cue" href="#lab"><span>Try the task</span><i aria-hidden="true"></i></a>
+    </section>
+
+    <section class="section lab-section" id="lab">
+      <div class="content-shell">
+        <div class="lab-heading reveal">
+          <div>
+            <p class="section-number section-number-light">01 / Working prototype</p>
+            <h2>How quickly can you respond to a visual signal?</h2>
+          </div>
+          <p>This reaction-time task is the first activity in our draft workshop. One result does not tell you much, so the task records five trials.</p>
+        </div>
+
+        <div class="lab-console reveal">
+          <div class="console-bar">
+            <span>REACTION_TIME.js · v0.2</span>
+            <p><i></i> local session only</p>
+          </div>
+
+          <button class="reaction-stage" id="reaction-stage" type="button" data-state="idle" aria-describedby="reaction-message">
+            <span class="stage-overline" id="reaction-label">Ready when you are</span>
+            <strong id="reaction-value">Start</strong>
+            <span id="reaction-message" aria-live="polite">Press once to begin. Wait for the color change, then press again.</span>
+          </button>
+
+          <div class="result-panel">
+            <div class="result-stats" aria-label="Reaction-time summary">
+              <div><span>Median</span><strong id="stat-median">n/a</strong><small>ms</small></div>
+              <div><span>Range</span><strong id="stat-range">n/a</strong><small>ms</small></div>
+              <div><span>Trials</span><strong id="stat-count">0</strong><small>of 5</small></div>
+            </div>
+            <ol class="trial-chart" id="trial-chart" aria-label="No reaction-time trials yet">
+              <li class="empty">Your five trials will appear here.</li>
+            </ol>
+          </div>
+
+          <div class="console-footer">
+            <p><strong>What the timer includes:</strong> visual detection, attention, decision time, nerve signaling, and movement.</p>
+            <button type="button" id="reset-trials">Reset results</button>
+          </div>
+        </div>
+
+        <div class="lab-limits">
+          <p><span>Where your data goes</span>Your five results stay in this tab. Reloading clears them, and the task does not upload them.</p>
+          <p><span>What the score means</span>This is not a health test. The score does not measure intelligence, athletic ability, or a medical condition.</p>
+          <p><span>Why results change</span>Practice, tiredness, screen lag, and the input device can all change the result.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section approach" id="approach">
+      <div class="content-shell">
+        <div class="section-heading reveal">
+          <p class="section-number">02 / How it works</p>
+          <h2>What each subject adds to the experiment</h2>
+          <p>A reaction-time score is only a starting point. Each subject helps explain part of the result and shows what the experiment cannot prove.</p>
+        </div>
+
+        <div class="lens-grid">
+          <article class="lens-card lens-wide reveal">
+            <div class="lens-index">P</div>
+            <div>
+              <p class="card-label">Physics</p>
+              <h3>Follow the signal</h3>
+              <p>Reaction time includes electrical signaling, synaptic transmission, and muscle activation. Students mark where delays can enter the system.</p>
+            </div>
+            <svg class="card-diagram" viewBox="0 0 260 120" aria-hidden="true">
+              <path d="M8 78 C42 78 46 28 78 28s38 68 72 68 36-56 68-56 28 22 36 22" fill="none" stroke="currentColor" stroke-width="2"/>
+              <circle cx="8" cy="78" r="5"/><circle cx="78" cy="28" r="5"/><circle cx="150" cy="96" r="5"/><circle cx="218" cy="40" r="5"/>
+            </svg>
+          </article>
+
+          <article class="lens-card reveal">
+            <div class="lens-index">M</div>
+            <p class="card-label">Mathematics</p>
+            <h3>Look past one number</h3>
+            <p>Students compare medians, ranges, and repeated trials instead of treating one fast click as a conclusion.</p>
+            <div class="mini-bars" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+          </article>
+
+          <article class="lens-card reveal">
+            <div class="lens-index">C</div>
+            <p class="card-label">Computer science</p>
+            <h3>Turn a question into code</h3>
+            <p>JavaScript controls the delay, timestamps each click, and keeps the five results in the current tab.</p>
+            <pre aria-hidden="true"><code>signal → timestamp
+click  → difference</code></pre>
+          </article>
+
+          <article class="lens-card lens-wide lens-med reveal">
+            <div class="lens-index">+</div>
+            <div>
+              <p class="card-label">Medicine</p>
+              <h3>Set limits on the result</h3>
+              <p>Short bursts of stress are not always harmful, but long-term stress can affect health. This activity measures a response to one visual signal. It cannot explain why one student was faster or slower.</p>
+              <a class="card-source" href="https://www.nccih.nih.gov/health/stress" target="_blank" rel="noopener">NIH overview of stress <span aria-hidden="true">↗</span></a>
+            </div>
+            <p class="boundary-note"><span>Important</span>This is a classroom activity. It is not a diagnosis and it does not collect medical data.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section pilot" id="pilot">
+      <div class="content-shell pilot-layout">
+        <div class="pilot-intro reveal">
+          <p class="section-number">03 / Pilot plan</p>
+          <h2>What needs to happen before the first workshop</h2>
+          <p>The browser task works. The lesson still needs a school pilot and teacher feedback before we call it ready.</p>
+          <div class="status-card">
+            <span>2026-27 status</span>
+            <strong>In development</strong>
+            <div><i></i><i></i><i></i><i></i></div>
+            <small>Experiment built · school pilot next</small>
+          </div>
+        </div>
+
+        <ol class="pilot-steps">
+          <li class="reveal">
+            <span>01</span>
+            <div><p>Build</p><h3>Reaction-time lab</h3><p>The browser task works without an account and keeps results in the current tab.</p></div>
+          </li>
+          <li class="reveal">
+            <span>02</span>
+            <div><p>Pilot</p><h3>Stress and attention workshop</h3><p>Run the draft lesson with a school or youth group and note where students get confused.</p></div>
+          </li>
+          <li class="reveal">
+            <span>03</span>
+            <div><p>Revise</p><h3>Student questions and teacher notes</h3><p>Use anonymous questions and teacher notes to revise the workshop.</p></div>
+          </li>
+          <li class="reveal">
+            <span>04</span>
+            <div><p>Publish</p><h3>Lesson, code, and limits</h3><p>Share the lesson and code after the first pilot, including what the activity could not establish.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section schools" id="schools">
+      <div class="content-shell school-card reveal">
+        <div>
+          <p class="section-number">04 / Pilot partners</p>
+          <h2>We need a school or youth group for the first pilot.</h2>
+          <p>A teacher, club advisor, library, or youth program can host the no-cost session and tell us what needs work.</p>
+        </div>
+        <div class="school-details">
+          <p><span>You tell us</span>Grade level, approximate group size, time available, and device access.</p>
+          <p><span>We bring</span>The draft lesson, the browser experiment, and discussion prompts.</p>
+          <a class="button button-dark" href="mailto:neurounity.org@gmail.com?subject=Neurounity%20pilot%20workshop">Email us about a pilot <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="content-shell footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo.png" alt="" width="52" height="52">
+        <div><strong>Neurounity Initiative</strong><span>Student-built neuroscience projects.</span></div>
+      </div>
+      <p>Built by high school students in Syosset, New York. The site is educational and is not medical advice.</p>
+      <div class="footer-links">
+        <a href="mailto:neurounity.org@gmail.com">Email us</a>
+        <a href="https://github.com/neurounityorg/neurounityorg.github.io">Source code</a>
+      </div>
+      <p class="copyright">© 2026 Neurounity Initiative</p>
+    </div>
+  </footer>
+</body>
+</html>
