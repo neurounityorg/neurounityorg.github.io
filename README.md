@@ -28,4 +28,5 @@ Then open <http://localhost:8000>.
 The task keeps results only in the open browser tab. This project has no account
 system, analytics, or cookies.
 
-See [BUILD_NOTES.md](BUILD_NOTES.md) for development and authorship details.
+The student team set the project's direction and reviewed its content. AI coding
+tools assisted with parts of the implementation and debugging.
